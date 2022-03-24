@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32210.238
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AwsSdk", "AwsClient\AwsSdk.csproj", "{9C84543C-424D-4DB7-BC03-04ACF8E0ED34}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Addons.AwsSdk", "Addons.AwsSdk\Addons.AwsSdk.csproj", "{9C84543C-424D-4DB7-BC03-04ACF8E0ED34}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AwsSdkTest", "AwsClientTests\AwsSdkTest.csproj", "{FE34FC67-C67E-455F-99C5-33BBCB0D4559}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Addons.AwsSdkTests", "Addons.AwsSdkTests\Addons.AwsSdkTests.csproj", "{FE34FC67-C67E-455F-99C5-33BBCB0D4559}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

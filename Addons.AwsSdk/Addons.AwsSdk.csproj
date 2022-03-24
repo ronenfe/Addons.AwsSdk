@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+	<Version>1.0.2</Version>
+    <TargetFrameworks>netstandard2.0;net45</TargetFrameworks>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Authors>ronenfe</Authors>
+    <Company>Festinger Software</Company>
+    <Description>Tools that are missing from the official AWSSDK</Description>
+    <Copyright>Open Source</Copyright>
+    <PackageProjectUrl></PackageProjectUrl>
+    <RepositoryUrl>https://github.com/ronenfe/AwsSdk</RepositoryUrl>
+    <PackageTags>CloudFormation;AwsSignature;Apigateway</PackageTags>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <SignAssembly>False</SignAssembly>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Aws4RequestSigner" Version="1.0.3" />
+    <PackageReference Include="AWSSDK.CloudFormation" Version="3.7.9.17" />
+  </ItemGroup>
+
+</Project>

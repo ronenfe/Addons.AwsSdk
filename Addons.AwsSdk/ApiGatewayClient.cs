@@ -4,7 +4,7 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AwsSdk
+namespace AwsSdkAddons
 {
     public class ApiGatewayClient
     {
@@ -29,7 +29,7 @@ namespace AwsSdk
         private async Task SignAsync(HttpRequestMessage request)
         {
             var signer = new AWS4RequestSigner(_accessKey, _secretKey);
-            request = await signer.Sign(request, "execute-api", _regionName).ConfigureAwait(false);
+            await signer.Sign(request, "execute-api", _regionName).ConfigureAwait(false);
         }
         public async Task<Uri> CreateServiceUrlAsync()
         {

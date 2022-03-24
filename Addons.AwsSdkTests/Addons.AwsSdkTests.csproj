@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -19,7 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\AwsClient\AwsSdk.csproj" />
+    <ProjectReference Include="..\Addons.AwsSdk\Addons.AwsSdk.csproj" />
   </ItemGroup>
 
   <ItemGroup>
