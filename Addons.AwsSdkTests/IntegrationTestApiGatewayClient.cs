@@ -33,7 +33,7 @@ namespace AwsSdkTest
         {
             var client = new ApiGatewayClient(_accessKey, _secretKey, _regionName);
 
-            var response = await client.PostAsync(new Uri(_address), _json).ConfigureAwait(false);
+            var response = await client.SendAsync(new Uri(_address), HttpMethod.Post, _json).ConfigureAwait(false);
             Assert.IsNotNull(response);
             Assert.AreNotEqual("", response);
         }

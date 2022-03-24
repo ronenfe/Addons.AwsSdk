@@ -24,12 +24,12 @@ namespace AwsSdkAddons
             var signer = new AWS4RequestSigner(_accessKey, _secretKey);
             await signer.Sign(request, "execute-api", _regionName).ConfigureAwait(false);
         }
-        public async Task<string> PostAsync(Uri address, string json)
+        public async Task<string> SendAsync(Uri address, HttpMethod method, string json)
         {
             var content = new StringContent(json, Encoding.UTF8, "application/json");
             var request = new HttpRequestMessage
             {
-                Method = HttpMethod.Post,
+                Method = method,
                 RequestUri = address,
                 Content = content,
             };
