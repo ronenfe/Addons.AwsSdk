@@ -9,38 +9,24 @@ namespace AwsSdkAddons
     public class ApiGatewayClient
     {
         private static readonly HttpClient HttpClient = new HttpClient();
-
         private readonly string _regionName;
         private readonly string _secretKey;
         private readonly string _accessKey;
-        private readonly string _serviceExportName;
-        private readonly string _ServiceRoute;
 
-        public ApiGatewayClient(string accessKey, string secretKey, string regionName, string serviceExportName, string serviceRoute)
+        public ApiGatewayClient(string accessKey, string secretKey, string regionName)
         {
             _secretKey = secretKey;
             _accessKey = accessKey;
-            _regionName = regionName;
-            _serviceExportName = serviceExportName;
-            _ServiceRoute = serviceRoute;
-            
+            _regionName = regionName;       
         }
-       
         private async Task SignAsync(HttpRequestMessage request)
         {
             var signer = new AWS4RequestSigner(_accessKey, _secretKey);
             await signer.Sign(request, "execute-api", _regionName).ConfigureAwait(false);
         }
-        public async Task<Uri> CreateServiceUrlAsync()
-        {
-            var cloudFormationClient = new CloudFormationClient(_accessKey, _secretKey, _regionName);
-            var serviceExportValue = await cloudFormationClient.GetExportValueByExportNameAsync(_serviceExportName).ConfigureAwait(false);
-            return new Uri(serviceExportValue + _ServiceRoute);
-        }
-        public async Task<string> PostAsync(string json)
+        public async Task<string> PostAsync(Uri address, string json)
         {
             var content = new StringContent(json, Encoding.UTF8, "application/json");
-            var address = await CreateServiceUrlAsync().ConfigureAwait(false);
             var request = new HttpRequestMessage
             {
                 Method = HttpMethod.Post,
