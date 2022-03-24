@@ -22,3 +22,7 @@ usage:
 
     var client = new ApiGatewayClient(_accessKey, _secretKey, _regionName);
     var response = await client.PostAsync(_address, HttpMethod.Post, _json);
+
+## Nuget
+
+https://www.nuget.org/packages/Addons.AwsSdk/2.1.1
