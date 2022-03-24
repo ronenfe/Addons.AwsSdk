@@ -23,4 +23,4 @@ _serviceRoute is the function you call in the api gateway
 _serviceExportName will be the export name, it's value should be the url that the api gateway is using.
 
     var client = new ApiGatewayClient(_accessKey, _secretKey, _regionName);
-    var response = await client.PostAsync(_address, _json);
+    var response = await client.PostAsync(_address, HttpMethod.Post, _json);
