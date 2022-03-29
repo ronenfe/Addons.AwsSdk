@@ -14,4 +14,4 @@ usage:
 
 ## Nuget
 
-https://www.nuget.org/packages/Addons.AwsSdk/2.1.1
+https://www.nuget.org/packages/Addons.AwsSdk
