@@ -24,7 +24,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="AWSSDK.CloudFormation" Version="3.7.9.19" />
+    <PackageReference Include="AWSSDK.CloudFormation" Version="3.7.304.5" />
   </ItemGroup>
 
 </Project>
