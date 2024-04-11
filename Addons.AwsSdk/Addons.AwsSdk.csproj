@@ -1,16 +1,16 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-	<Version>3.0.0</Version>
+	<Version>3.0.1</Version>
     <TargetFrameworks>netstandard2.0</TargetFrameworks>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <Authors>ronenfe</Authors>
-    <Company>Festinger Software</Company>
+    <Authors/>
+    <Company/>
     <Description>Tools that are missing from the official AWSSDK</Description>
     <Copyright>Open Source</Copyright>
-    <PackageProjectUrl></PackageProjectUrl>
+    <PackageProjectUrl>https://www.nuget.org/packages/Addons.AwsSdk/</PackageProjectUrl>
     <RepositoryUrl>https://github.com/ronenfe/AwsSdk</RepositoryUrl>
-    <PackageTags>CloudFormation;AwsSignature;Apigateway</PackageTags>
+    <PackageTags>CloudFormation</PackageTags>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <SignAssembly>False</SignAssembly>
     <PackageReadmeFile>README.md</PackageReadmeFile>
@@ -24,7 +24,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="AWSSDK.CloudFormation" Version="3.7.304.5" />
+    <PackageReference Include="AWSSDK.CloudFormation" Version="*" />
   </ItemGroup>
 
 </Project>

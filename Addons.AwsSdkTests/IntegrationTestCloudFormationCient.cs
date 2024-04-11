@@ -8,10 +8,10 @@ namespace AwsSdkTest
     [TestClass]
     public class IntegrationTestCloudFormationCient
     {
-        private readonly string _accessKey;
-        private readonly string _secretKey;
-        private readonly string _regionName;
-        private readonly string _serviceExportName;
+        private readonly string? _accessKey = "";
+        private readonly string? _secretKey = "";
+        private readonly string? _regionName = "";
+        private readonly string? _serviceExportName = "";
 
         public IntegrationTestCloudFormationCient()
         {
